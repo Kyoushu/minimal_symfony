@@ -22,3 +22,10 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    PDO:
+        class: PDO
+        arguments:
+            - '%env(DATABASE_DSN)%'
+            - '%env(DATABASE_USERNAME)%'
+            - '%env(DATABASE_PASSWORD)%'
